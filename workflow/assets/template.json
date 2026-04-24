@@ -1,0 +1,45 @@
+{
+  "template_name": "Agent-Native Habit Loop (ANHL)",
+  "description": "A deterministic habit loop for autonomous agents, enabling trigger-action-reward cycles without human involvement.",
+  "inputs": {
+    "trigger": {
+      "type": "object",
+      "description": "Condition or event that initiates the habit loop."
+    },
+    "action": {
+      "type": "object",
+      "description": "The behavior the agent performs when the trigger occurs."
+    },
+    "reward": {
+      "type": "object",
+      "description": "Reinforcement signal used to strengthen or weaken the habit."
+    },
+    "adjustment_rules": {
+      "type": "list",
+      "description": "Rules for modifying the habit loop over time."
+    }
+  },
+  "workflow": [
+    {
+      "step": "detect_trigger",
+      "action": "Agent monitors for the trigger condition."
+    },
+    {
+      "step": "execute_action",
+      "action": "Agent performs the associated action deterministically."
+    },
+    {
+      "step": "apply_reward",
+      "action": "Reward signal is applied to reinforce or weaken the loop."
+    },
+    {
+      "step": "adjust_loop",
+      "action": "Habit loop is modified according to adjustment rules."
+    },
+    {
+      "step": "return_summary",
+      "action": "Protocol returns a machine-readable habit loop summary."
+    }
+  ],
+  "output_format": "json"
+}
